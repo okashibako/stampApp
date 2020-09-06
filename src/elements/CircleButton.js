@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, View } from 'react-native';
  
-const CircleButton = () => {
+const CircleButton = (props) => {
   const { ButtonText, ButtonBase } = styles;
   return (
     <View style={ButtonBase}>
-      <Button style={ButtonText} title="Press Me"></Button>
+      <Button style={ButtonText} title={props.text}></Button>
     </View>
   );
 };
