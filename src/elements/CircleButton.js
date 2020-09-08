@@ -15,10 +15,13 @@ const styles = {
       backgroundColor: '#F8F8F8',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 60,
+      width:100,
+      height: 100,
       paddingTop: 15,
       elevation: 2,
-      position: 'relative'
+      position: 'relative',
+      borderRadius:50,
+      borderWidth:1,
     },
     ButtonText: {
       fontSize: 20,
