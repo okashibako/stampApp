@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View} from 'react-native';
 import CircleButton from '../../src/elements/CircleButton';
- 
+
 const pageStyle = {
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: 200,
-  paddingTop: 100
+  justifyContent: 'center',  
+  flex: 1,
 }
-const fontStyle = {
-  fontSize: 36,
-  fontWeight: '600'
+const upperButtonStyle = {
+  margin: 30,  
+  flexDirection: 'row',  
+  justifyContent: 'space-between'  
 }
- 
+
 class entrance extends Component {
   constructor(props) {
     super(props);
@@ -22,8 +21,11 @@ class entrance extends Component {
   render() {
     return (
     <View style={pageStyle}>
-      <Text style={fontStyle}>おおおおお</Text>
-      <CircleButton text="三日間コース"/>
+      <View style={upperButtonStyle}>
+        <CircleButton text="三日間コース"/>
+        <CircleButton text="一週間コース"/>
+        <CircleButton text="一週間コース"/>
+      </View>
     </View>
     );
   }
