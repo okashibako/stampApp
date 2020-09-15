@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button, View } from 'react-native';
- 
+import { View, Button } from 'react-native';
 const CircleButton = (props) => {
   const { ButtonText, ButtonBase } = styles;
   return (
     <View style={ButtonBase}>
-      <Button style={ButtonText} title={props.text}></Button>
+      <Button style={ButtonText} onPress={props.press} title={props.text}></Button>
     </View>
   );
 };

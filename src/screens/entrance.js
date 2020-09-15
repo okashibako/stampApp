@@ -18,13 +18,16 @@ class entrance extends Component {
     this.state = {
        };
   }
+  start(id){
+    console.log(id);
+  }
   render() {
     return (
     <View style={pageStyle}>
       <View style={upperButtonStyle}>
-        <CircleButton text="三日間コース"/>
-        <CircleButton text="一週間コース"/>
-        <CircleButton text="一週間コース"/>
+        <CircleButton press={() => {this.start(1)}} text="三日間コース"/>
+        <CircleButton press={() => {this.start(2)}} text="一週間コース"/>
+        <CircleButton press={() => {this.start(3)}} text="一週間コース"/>
       </View>
     </View>
     );
