@@ -12,7 +12,7 @@ const upperButtonStyle = {
   justifyContent: 'space-between'  
 }
 
-class entrance extends Component {
+class main extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,12 +27,10 @@ class entrance extends Component {
     <View style={pageStyle}>
       <View style={upperButtonStyle}>
         <CircleButton press={() => {this.start(1)}} text="三日間コース"/>
-        <CircleButton press={() => {this.start(2)}} text="一週間コース"/>
-        <CircleButton press={() => {this.start(3)}} text="一週間コース"/>
       </View>
     </View>
     );
   }
 }
 
-export default entrance;
+export default main;
