@@ -5,7 +5,7 @@ import main from './src/screens/main';
 
 
 const App = () => (
-    <Router>
+    <Router navigationBarStyle={{ backgroundColor: '#81b71a' }}>
         <Scene key="root">
             <Scene key="entrance" initial component={entrance} title="entrance" />
             <Scene key="main" component={main} title="main" />
