@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View,Text,Button } from 'react-native';
 import CircleButton from '../../src/elements/CircleButton';
-import {Actions} from 'react-native-router-flux';
+import Modal from "react-native-modal";
+
 const pageStyle = {
   justifyContent: 'center',  
   flex: 1,
@@ -16,17 +17,23 @@ class main extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isModalVisible: false
        };
   }
-  start(id){
-    console.log(id);
-    Actions.main();
+  start(){
+    this.setState({ isModalVisible: !this.state.isModalVisible });
   }
   render() {
     return (
     <View style={pageStyle}>
       <View style={upperButtonStyle}>
-        <CircleButton press={() => {this.start(1)}} text="三日間コース"/>
+        <CircleButton press={() => {this.start()}} text="三日間コース"/>
+        <Modal isVisible={this.state.isModalVisible}>
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff" }}>
+            <Text>Modal Content</Text>
+            <Button title="Close modal" onPress={() => {this.start()}}/>
+          </View>
+        </Modal>
       </View>
     </View>
     );
