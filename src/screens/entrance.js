@@ -5,6 +5,7 @@ import {Actions} from 'react-native-router-flux';
 const pageStyle = {
   justifyContent: 'center',  
   flex: 1,
+  backgroundColor: '#00BFFF',
 }
 const upperButtonStyle = {
   margin: 30,  
