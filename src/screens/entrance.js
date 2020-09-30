@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import CircleButton from '../../src/elements/CircleButton';
+import CircleButton from '../../src/elements/atom/CircleButton';
 import {Actions} from 'react-native-router-flux';
 const pageStyle = {
   justifyContent: 'center',  

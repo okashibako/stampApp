@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View,Text,Button } from 'react-native';
-import CircleButton from '../../src/elements/CircleButton';
+import CircleButton from '../../src/elements/atom/CircleButton';
 import Modal from "react-native-modal";
 
 const pageStyle = {
