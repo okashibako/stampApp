@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View,Text,Button } from 'react-native';
 import CircleButton from '../../src/elements/atom/CircleButton';
+import GreeButton from '../../src/elements/atom/GreeButton';
 import Modal from "react-native-modal";
 
 const pageStyle = {
@@ -31,7 +32,7 @@ class main extends Component {
         <Modal isVisible={this.state.isModalVisible}>
           <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff" }}>
             <Text>Modal Content</Text>
-            <Button title="Close modal" onPress={() => {this.start()}}/>
+            <GreeButton press={() => {this.start()}} text="決定"/>
           </View>
         </Modal>
       </View>
