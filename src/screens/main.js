@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View,Text,Button } from 'react-native';
-import CircleButton from '../../src/elements/atom/CircleButton';
 import GreeButton from '../../src/elements/atom/GreeButton';
+import OpningDatapicker from '../../src/components/OpningDatapicker';
 import Modal from "react-native-modal";
 
 const pageStyle = {
@@ -13,12 +13,18 @@ const upperButtonStyle = {
   flexDirection: 'row',  
   justifyContent: 'space-between'  
 }
-
+const Modaltyle = {
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: "#fff"
+}
 class main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalVisible: false
+      isModalVisible: false,
+      date:"2016-05-15"
        };
   }
   componentDidMount(){
@@ -27,14 +33,17 @@ class main extends Component {
   start(){
     this.setState({ isModalVisible: !this.state.isModalVisible });
   }
+  dateChange(){
+    this.setState({date: this.state.date});
+  }
   render() {
     return (
     <View style={pageStyle}>
       <View style={upperButtonStyle}>
-        <CircleButton press={() => {this.start()}} text="三日間コース"/>
         <Modal isVisible={this.state.isModalVisible}>
-          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff" }}>
+          <View style={Modaltyle}>
             <Text>Modal Content</Text>
+            <OpningDatapicker dated={this.state.date} change={() => {this.dateChange()}}/>
             <GreeButton press={() => {this.start()}} text="決定"/>
           </View>
         </Modal>
