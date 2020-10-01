@@ -21,6 +21,9 @@ class main extends Component {
       isModalVisible: false
        };
   }
+  componentDidMount(){
+    this.setState({ isModalVisible: !this.state.isModalVisible });
+  }
   start(){
     this.setState({ isModalVisible: !this.state.isModalVisible });
   }
