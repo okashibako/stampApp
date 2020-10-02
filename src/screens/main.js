@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,Button } from 'react-native';
+import { View,Text} from 'react-native';
 import GreeButton from '../../src/elements/atom/GreeButton';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import Modal from "react-native-modal";
@@ -24,7 +24,7 @@ class main extends Component {
     super(props);
     this.state = {
       isModalVisible: false,
-      date:"2016-05-15"
+      date: new Date(1598051730000)
        };
   }
   componentDidMount(){
