@@ -9,7 +9,7 @@ import { View} from 'react-native';
         style={{width: 200}}
         testID="dateTimePicker"
         value={props.dated}
-        mode={"date"}
+        mode={"time"}
         is24Hour={true}
         display="default"
         onChange={(date) => props.change}
