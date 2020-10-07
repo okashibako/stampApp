@@ -3,22 +3,8 @@ import { View,Text} from 'react-native';
 import GreeButton from '../../src/elements/atom/GreeButton';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import Modal from "react-native-modal";
+import mainStyle from '../../src/style/mainStyle';
 
-const pageStyle = {
-  justifyContent: 'center',  
-  flex: 1,
-}
-const upperButtonStyle = {
-  margin: 30,  
-  flexDirection: 'row',  
-  justifyContent: 'space-between'  
-}
-const Modaltyle = {
-  flex: 1,
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: "#fff"
-}
 class main extends Component {
   constructor(props) {
     super(props);
@@ -38,10 +24,10 @@ class main extends Component {
   }
   render() {
     return (
-    <View style={pageStyle}>
-      <View style={upperButtonStyle}>
+    <View style={mainStyle.pageStyle}>
+      <View>
         <Modal isVisible={this.state.isModalVisible}>
-          <View style={Modaltyle}>
+          <View style={mainStyle.Modaltyle}>
             <Text>Modal Content</Text>
             <OpningDatapicker dated={this.state.date} change={() => {this.dateChange()}}/>
             <GreeButton press={() => {this.start()}} text="決定"/>
