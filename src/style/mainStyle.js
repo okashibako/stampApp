@@ -5,6 +5,11 @@ const mainStyle = StyleSheet.create({
     justifyContent: 'center',  
     flex: 1,
   },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
+  },
   Modaltyle: {
     width: 300,
     height:300,
