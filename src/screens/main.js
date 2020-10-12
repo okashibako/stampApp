@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text} from 'react-native';
+import { View,Text,ImageBackground} from 'react-native';
 import GreeButton from '../../src/elements/atom/GreeButton';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import Modal from "react-native-modal";
@@ -25,7 +25,7 @@ class main extends Component {
   render() {
     return (
     <View style={mainStyle.pageStyle}>
-      <View>
+      <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
         <Modal isVisible={this.state.isModalVisible}>
           <View style={mainStyle.Modaltyle}>
             <Text>Modal Content</Text>
@@ -33,7 +33,7 @@ class main extends Component {
             <GreeButton press={() => {this.start()}} text="決定"/>
           </View>
         </Modal>
-      </View>
+      </ImageBackground>
     </View>
     );
   }
