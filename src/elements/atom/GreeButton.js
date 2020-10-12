@@ -15,9 +15,10 @@ const styles = {
       justifyContent: 'center',
       alignItems: 'center',
       width:100,
-      paddingTop: 15,
       elevation: 2,
       position: 'relative',
+      backgroundColor: '#000',
+      margin: 15
     },
     ButtonText: {
       fontSize: 20,
