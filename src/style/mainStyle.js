@@ -20,6 +20,15 @@ const mainStyle = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: "#fff"
+  },
+  DatePickerStyle: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: "#fff"
   }
 });
 export default mainStyle;
