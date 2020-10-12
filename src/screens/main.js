@@ -34,7 +34,9 @@ class main extends Component {
             <GreeButton press={() => {this.start()}} text="決定"/>
           </View>
         </Modal>
-        {this.state.isModalClicked ? <OpningDatapicker dated={this.state.date} change={() => {this.dateChange()}}/> : null}
+        <View style={mainStyle.DatePickerStyle}>
+          {this.state.isModalClicked ? <OpningDatapicker dated={this.state.date} change={() => {this.dateChange()}}/> : null}
+        </View>
       </ImageBackground>
     </View>
     );
