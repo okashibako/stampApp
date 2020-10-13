@@ -1,17 +1,17 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 const CircleButton = (props) => {
-  const { ButtonText, ButtonBase } = styles;
+  const { ButtonBase } = styles;
   return (
-    <View style={ButtonBase}>
-      <TouchableOpacity style={ButtonText} onPress={props.press} ><Text>{props.text}</Text></TouchableOpacity>
+    <View>
+      <TouchableOpacity style={ButtonBase} onPress={props.press} ><Text>{props.text}</Text></TouchableOpacity>
     </View>
   );
 };
 
 const styles = {
-    ButtonText: {
-      backgroundColor: '#F8F8F8',
+  ButtonBase: {
+      backgroundColor: '#f7cc9e',
       justifyContent: 'center',
       alignItems: 'center',
       width:100,
@@ -20,7 +20,7 @@ const styles = {
       elevation: 2,
       position: 'relative',
       borderRadius:50,
-      borderWidth:1,
+      borderWidth:0.4,
     },
   };
   export default CircleButton;
