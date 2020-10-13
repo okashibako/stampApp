@@ -31,7 +31,7 @@ class main extends Component {
         <Modal isVisible={this.state.isModalVisible}>
           <View style={mainStyle.Modaltyle}>
             <Text>Modal Content</Text>
-            <GreeButton press={() => {this.start()}} text="決定"/>
+            <GreeButton press={() => {this.start()}} text="はい"/>
           </View>
         </Modal>
         <View style={mainStyle.DatePickerStyle}>

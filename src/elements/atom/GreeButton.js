@@ -12,13 +12,10 @@ const GreeButton = (props) => {
 
 const styles = {
     ButtonBase: {
-      justifyContent: 'center',
-      alignItems: 'center',
       width:100,
       elevation: 2,
       position: 'relative',
-      backgroundColor: '#000',
-      margin: 15
+      marginTop: 50
     },
     ButtonText: {
       fontSize: 20,
