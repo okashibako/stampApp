@@ -12,7 +12,7 @@ import { View} from 'react-native';
         mode={"time"}
         is24Hour={true}
         display="default"
-        onChange={(date) => props.change}
+        onChange={props.change}
       />
     </View>
   );

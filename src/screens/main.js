@@ -10,7 +10,7 @@ class main extends Component {
     super(props);
     this.state = {
       isModalVisible: false,
-      date: new Date(1598051730000),
+      date: new Date(),
       isModalClicked: false
        };
   }
@@ -21,8 +21,10 @@ class main extends Component {
     this.setState({ isModalVisible: !this.state.isModalVisible });
     this.setState({ isModalClicked: !this.state.isModalClicked });
   }
-  dateChange(){
-    this.setState({date: this.state.date});
+  dateChange(e,selectedDate){
+    console.log(selectedDate);
+    this.setState({date: selectedDate});
+    console.log(this.state.date)
   }
   render() {
     return (
@@ -35,7 +37,7 @@ class main extends Component {
           </View>
         </Modal>
         <View style={mainStyle.DatePickerStyle}>
-          {this.state.isModalClicked ? <OpningDatapicker dated={this.state.date} change={() => {this.dateChange()}}/> : null}
+          {this.state.isModalClicked ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
         </View>
       </ImageBackground>
     </View>
