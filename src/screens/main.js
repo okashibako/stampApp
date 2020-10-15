@@ -9,19 +9,20 @@ class main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalVisible: false,
+      isModalVisible: true,
       date: new Date(),
-      isModalClicked: false
+      isModalDisplay: false
        };
   }
   componentDidMount(){
-    this.setState({ isModalVisible: !this.state.isModalVisible });
   }
   start(){
     this.setState({ isModalVisible: !this.state.isModalVisible });
-    this.setState({ isModalClicked: !this.state.isModalClicked });
+    this.setState({ isModalDisplay: !this.state.isModalDisplay });
+
   }
   dateChange(e,selectedDate){
+    this.setState({ isModalDisplay: false });
     console.log(selectedDate);
     this.setState({date: selectedDate});
     console.log(this.state.date)
@@ -37,7 +38,7 @@ class main extends Component {
           </View>
         </Modal>
         <View style={mainStyle.DatePickerStyle}>
-          {this.state.isModalClicked ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
+          {this.state.isModalDisplay ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
         </View>
       </ImageBackground>
     </View>
