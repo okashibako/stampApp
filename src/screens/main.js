@@ -13,15 +13,15 @@ class main extends Component {
   }
   componentDidMount(){
   }
-  start(){
-    this.setState({ isModalDisplay: !this.state.isModalDisplay });
 
-  }
   dateChange(e,selectedDate){
-    this.setState({ isModalDisplay: false });
-    console.log(selectedDate);
-    this.setState({date: selectedDate});
-    console.log(this.state.date)
+    if(selectedDate){
+      this.setState({ isModalDisplay: !this.state.isModalDisplay });
+      this.setState({date: selectedDate});
+      console.log(this.state.date);
+    } else {
+      console.log("ひっぽ");
+    }
   }
   render() {
     return (
