@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View,ImageBackground} from 'react-native';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import mainStyle from '../../src/style/mainStyle';
+import AsyncStorage from '@react-native-community/async-storage';
+import {Actions} from 'react-native-router-flux';
 
 class main extends Component {
   constructor(props) {
@@ -11,7 +13,19 @@ class main extends Component {
       isModalDisplay: true
        };
   }
-  componentDidMount(){
+  async componentDidMount(){
+    try {
+      const value = await AsyncStorage.getItem('first_login');
+      console.log(value);
+      if (value !== null) {
+        // We have data!!
+        console.log(value);
+      } else {
+        Actions.entrance();
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
   }
 
   dateChange(e,selectedDate){

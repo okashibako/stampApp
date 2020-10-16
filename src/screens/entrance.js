@@ -4,22 +4,33 @@ import CircleButton from '../../src/elements/atom/CircleButton';
 import {Actions} from 'react-native-router-flux';
 import entranceStyle from '../../src/style/entranceStyle';
 import SelectModal from '../elements/molecules/SelectModal';
+import AsyncStorage from '@react-native-community/async-storage';
 
 class entrance extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalVisible: true,
+      isModalVisible: false,
        };
   }
   start(){
     this.setState({ isModalVisible: !this.state.isModalVisible });
 
   }
-  apply(){
-    console.log("はい");
+  async apply(){
     this.setState({ isModalVisible: !this.state.isModalVisible });
-    Actions.main();
+    try {
+      const value = await AsyncStorage.setItem('first_login', "1");
+      Actions.main();
+      if (value !== null) {
+        // We have data!!
+        Actions.main();
+        console.log(value);
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
+
   }
   render() {
     console.log(this.state.isModalVisible)
@@ -31,7 +42,10 @@ class entrance extends Component {
           <CircleButton press={() => {this.start()}} text="一週間コース"/>
           <CircleButton press={() => {this.start()}} text="一週間コース"/>
         </View>
-        <SelectModal visible={this.state.isModalVisible} press={() => {this.apply()}}/>
+        <SelectModal 
+          visible={this.state.isModalVisible}
+          press={() => {this.apply()}}
+        />
       </ImageBackground>
     </View>
     );
