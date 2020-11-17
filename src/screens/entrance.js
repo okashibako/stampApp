@@ -33,7 +33,6 @@ class entrance extends Component {
 
   }
   render() {
-    console.log(this.state.isModalVisible)
     return (
     <View style={entranceStyle.pageStyle}>
       <ImageBackground source={require('../../assets/carm_sea.jpg')} style={entranceStyle.image}>

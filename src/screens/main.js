@@ -18,13 +18,11 @@ class main extends Component {
       const value = await AsyncStorage.getItem('first_login');
       console.log(value);
       if (value !== null) {
-        // We have data!!
         console.log(value);
       } else {
         Actions.entrance();
       }
     } catch (error) {
-      // Error retrieving data
     }
   }
 
