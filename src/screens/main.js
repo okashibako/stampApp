@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { View,ImageBackground} from 'react-native';
+import { View,ImageBackground, Text} from 'react-native';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Actions} from 'react-native-router-flux';
+import Box from '../../src/elements/atom/Box';
 
 class main extends Component {
   constructor(props) {
@@ -38,6 +39,8 @@ class main extends Component {
   render() {
     return (
     <View style={mainStyle.pageStyle}>
+      <Box>
+      </Box>
       <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
         <View style={mainStyle.DatePickerStyle}>
           {this.state.isModalDisplay ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
