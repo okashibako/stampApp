@@ -1,25 +1,16 @@
 import {StyleSheet} from 'react-native';
 
 const mainStyle = StyleSheet.create({
-  pageStyle: {
-    justifyContent: 'center',  
-    flex: 1,
-  },
   image: {
     flex: 1,
     resizeMode: "cover",
-    justifyContent: "center"
+    justifyContent: "center",
+    position:'relative'
   },
-  Modaltyle: {
-    width: 300,
-    height:300,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: 'auto',
-    marginBottom: 'auto',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: "#fff"
+  boxStyle: {
+    position:'relative',
+    top:'25%',
+    left: '8%',
   },
   DatePickerStyle: {
     marginLeft: 'auto',
@@ -29,6 +20,6 @@ const mainStyle = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: "#fff"
-  }
+  },
 });
 export default mainStyle;
