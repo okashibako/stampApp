@@ -5,7 +5,7 @@ const Box = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.triangle}>
-        <Text>React Nativeで吹き出しUIをつくる</Text>
+        <Text>React Nativeで吹き出しUIをつくるぞおおおおおおおおおおおおおお</Text>
       </View>
     </View>
   );
@@ -13,14 +13,12 @@ const Box = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 'auto',
-        marginHorizontal: 'auto',
-        padding: 24,
-        backgroundColor: '#fff',
-      },
+      width:'80%',
+      padding: 20,
+      backgroundColor: '#fff',
+      marginBottom: 10,
+    },
       triangle: {
-        position: 'absolute',
-        top: '100%',
       }
   });
   export default Box;
