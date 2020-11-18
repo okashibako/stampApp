@@ -38,15 +38,14 @@ class main extends Component {
   }
   render() {
     return (
-    <View style={mainStyle.pageStyle}>
-      <Box>
-      </Box>
       <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
+        <View style={mainStyle.boxStyle}>
+          <Box/>
+        </View>
         <View style={mainStyle.DatePickerStyle}>
           {this.state.isModalDisplay ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
         </View>
       </ImageBackground>
-    </View>
     );
   }
 }
