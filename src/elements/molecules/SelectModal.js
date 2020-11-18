@@ -1,14 +1,13 @@
 import React from 'react';
-import { View,Text } from 'react-native';
+import { View,Text, StyleSheet } from 'react-native';
 import GreeButton from '../atom/GreeButton';
 import Modal from "react-native-modal";
 
 const SelectModal = (props) => {
-  const { Modaltyle } = styles;
   
   return (
     <Modal isVisible={props.visible}>
-      <View style={Modaltyle}>
+      <View style={styles.Modaltyle}>
         <Text>このコースでよろしいですか？</Text>
         <GreeButton press={() => {props.press()}} text="はい"/>
       </View>
@@ -16,7 +15,7 @@ const SelectModal = (props) => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
     Modaltyle: {
         width: 300,
         height:300,
@@ -28,5 +27,5 @@ const styles = {
         alignItems: 'center',
         backgroundColor: "#fff"
     },
-  };
+  });
   export default SelectModal;
