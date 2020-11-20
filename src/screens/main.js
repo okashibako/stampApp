@@ -39,11 +39,13 @@ class main extends Component {
   render() {
     return (
       <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
-        <View style={mainStyle.boxStyle}>
-          <Box/>
-        </View>
-        <View style={mainStyle.DatePickerStyle}>
-          {this.state.isModalDisplay ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
+        <View style={mainStyle.contents}>
+          <View style={mainStyle.boxStyle}>
+            <Box/>
+          </View>
+          <View style={mainStyle.DatePickerStyle}>
+            {this.state.isModalDisplay ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
+          </View>
         </View>
       </ImageBackground>
     );

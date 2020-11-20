@@ -4,15 +4,15 @@ const mainStyle = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
-    justifyContent: "center",
-    position:'relative'
+  },
+  contents: {
+    marginTop: '25%',
+    padding: '10%'
   },
   boxStyle: {
-    width:'80%',
+    width:'auto',
     marginBottom: 10,
     position:'relative',
-    top:'25%',
-    left: '8%'
   },
   DatePickerStyle: {
     marginLeft: 'auto',
