@@ -6,12 +6,12 @@ const mainStyle = StyleSheet.create({
     resizeMode: "cover",
   },
   contents: {
-    marginTop: '25%',
+    marginTop: '20%',
     padding: '10%'
   },
   boxStyle: {
     width:'auto',
-    marginBottom: 10,
+    margin: 10,
     position:'relative',
   },
   DatePickerStyle: {
