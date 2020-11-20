@@ -13,10 +13,8 @@ const Box = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-      width:'80%',
       padding: 20,
-      backgroundColor: '#fff',
-      marginBottom: 10,
+      backgroundColor: '#fff',  
     },
       triangle: {
       }

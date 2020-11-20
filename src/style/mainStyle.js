@@ -8,9 +8,11 @@ const mainStyle = StyleSheet.create({
     position:'relative'
   },
   boxStyle: {
+    width:'80%',
+    marginBottom: 10,
     position:'relative',
     top:'25%',
-    left: '8%',
+    left: '8%'
   },
   DatePickerStyle: {
     marginLeft: 'auto',
