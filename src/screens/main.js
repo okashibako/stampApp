@@ -5,6 +5,7 @@ import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Actions} from 'react-native-router-flux';
 import Box from '../../src/elements/atom/Box';
+import MainNavigationBar from '../../src/elements/molecules/MainNavigationBar';
 
 class main extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class main extends Component {
   render() {
     return (
       <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
+        <MainNavigationBar/>
         <View style={mainStyle.contents}>
           <View style={mainStyle.boxStyle}>
             <Box/>
