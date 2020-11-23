@@ -5,10 +5,10 @@ import main from './src/screens/main';
 
 
 const App = () => (
-    <Router navigationBarStyle={{ backgroundColor: '#ADD8E6' }}>
+    <Router>
         <Scene key="root">
         <Scene key="entrance" initial　component={entrance} title="entrance" left={()=>null}/>
-        <Scene key="main" component={main} title="main" left={()=>null}/>
+        <Scene key="main" component={main} title="main" left={()=>null} hideNavBar/>
         </Scene>
     </Router>
 );
