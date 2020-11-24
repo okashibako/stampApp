@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 const CircleButton = (props) => {
-  const { ButtonBase, ButtonText} = styles;
   return (
     <View>
       <TouchableOpacity style={styles.ButtonBase} onPress={props.press} ><Text style={styles.ButtonText}>{props.text}</Text></TouchableOpacity>

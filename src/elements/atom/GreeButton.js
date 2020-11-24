@@ -1,25 +1,18 @@
 import React from 'react';
-import { View, Button } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
 const GreeButton = (props) => {
-  const { ButtonText, ButtonBase } = styles;
   
   return (
-    <View style={ButtonBase}>
-      <Button style={ButtonText} onPress={props.press} title={props.text}></Button>
+    <View style={styles.ButtonBase}>
+      <Button onPress={props.press} title={props.text}></Button>
     </View>
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
     ButtonBase: {
       width:100,
-      elevation: 2,
-      position: 'relative',
-      marginTop: 50
+      margin: 20
     },
-    ButtonText: {
-      fontSize: 20,
-      fontWeight: '400'
-    }
-  };
+  });
   export default GreeButton;
