@@ -1,37 +1,36 @@
-import React from 'react';
-import { View, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import NavigationBar from 'react-native-navbar';
-import { Actions } from 'react-native-router-flux';
-const rightButtonConfig = {
-  title: 'Save',
-  tintColor: 'blue',
-  handler: () => console.log('Saved'),
-};
-  
-const titleConfig = {
-  title: 'Home',
-};
+import React, { Component } from 'react';
+import { View, StatusBar,StyleSheet, TouchableWithoutFeedback, Image} from 'react-native';
+import { Actions, Router, Scene } from 'react-native-router-flux';
 
-const MainNavigationBar = (props) => {
-  
-  return (
-    <View>
-      <NavigationBar
-        title={titleConfig}
-        rightButton={rightButtonConfig}
-        leftButton={
-          <Icon name="home" size={30} onPress={() => Actions.pop()} />
-        }
-        style={styles.container}
-      />
-    </View>
-  );
+class MainNavigationBar extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBar />
+        <View style={styles.rowsComponent}>
+          <TouchableWithoutFeedback onPress={() => Actions.pop()}>
+            <Image source={require('../../../assets/baketu.png')}style={styles.backarrowStyle} />
+          </TouchableWithoutFeedback>
+        </View>
+      </View>
+    );
+  }
 };
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#ADD8E6',  
+      backgroundColor: '#fff',  
+    },
+    rowsComponent: {
+      backgroundColor: '#fff',  
+    },
+    backarrowStyle: {
+      resizeMode: 'contain',
+      flexDirection: 'row',
+      width: 40,
+      height: 40,
+      left: 0,
+      justifyContent: 'flex-start'
     },
   });
   export default MainNavigationBar;
