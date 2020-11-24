@@ -6,9 +6,9 @@ const entranceStyle = StyleSheet.create({
     flex: 1,
   },
   upperButtonStyle: {
-    margin: 30,  
+    margin: 20,  
     flexDirection: 'row',  
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   image: {
     flex: 1,

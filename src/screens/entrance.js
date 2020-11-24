@@ -34,19 +34,19 @@ class entrance extends Component {
   }
   render() {
     return (
-    <View style={entranceStyle.pageStyle}>
-      <ImageBackground source={require('../../assets/carm_sea.jpg')} style={entranceStyle.image}>
-        <View style={entranceStyle.upperButtonStyle}>
-          <CircleButton press={() => {this.start()}} text="三日間コース"/>
-          <CircleButton press={() => {this.start()}} text="一週間コース"/>
-          <CircleButton press={() => {this.start()}} text="一週間コース"/>
-        </View>
-        <SelectModal 
-          visible={this.state.isModalVisible}
-          press={() => {this.apply()}}
-        />
-      </ImageBackground>
-    </View>
+    <ImageBackground source={require('../../assets/carm_sea.jpg')} style={entranceStyle.image}>
+      <View style={entranceStyle.pageStyle}>
+          <View style={entranceStyle.upperButtonStyle}>
+            <CircleButton press={() => {this.start()}} text="三日間コース"/>
+            <CircleButton press={() => {this.start()}} text="一週間コース"/>
+            <CircleButton press={() => {this.start()}} text="一週間コース"/>
+          </View>
+          <SelectModal 
+            visible={this.state.isModalVisible}
+            press={() => {this.apply()}}
+          />
+      </View>
+    </ImageBackground>
     );
   }
 }
