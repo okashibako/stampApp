@@ -6,7 +6,7 @@ import { View} from 'react-native';
   return (
     <View>
        <DateTimePicker
-        style={{width: 200}}
+        style={{width: 100}}
         testID="dateTimePicker"
         value={props.dated}
         mode={"time"}
