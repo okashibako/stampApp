@@ -5,7 +5,7 @@ import { Actions, Router, Scene } from 'react-native-router-flux';
 class MainNavigationBar extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View >
         <StatusBar />
         <View style={styles.rowsComponent}>
           <TouchableWithoutFeedback onPress={() => Actions.pop()}>
@@ -18,9 +18,6 @@ class MainNavigationBar extends Component {
 };
 
 const styles = StyleSheet.create({
-    container: {
-      backgroundColor: '#fff',  
-    },
     rowsComponent: {
       backgroundColor: '#fff',  
     },
@@ -28,8 +25,9 @@ const styles = StyleSheet.create({
       resizeMode: 'contain',
       flexDirection: 'row',
       width: 40,
-      height: 40,
+      height: 80,
       left: 0,
+      top:10,
       justifyContent: 'flex-start'
     },
   });
