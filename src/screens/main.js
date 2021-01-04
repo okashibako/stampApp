@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,ImageBackground, Text} from 'react-native';
+import { View,ImageBackground, Text, StatusBar} from 'react-native';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -40,6 +40,7 @@ class main extends Component {
     return (
       <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
         <View style={mainStyle.contents}>
+        <StatusBar/>
           <View style={mainStyle.boxStyle}>
             <Box/>
           </View>
