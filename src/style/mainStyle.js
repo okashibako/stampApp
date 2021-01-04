@@ -21,7 +21,6 @@ const mainStyle = StyleSheet.create({
     marginBottom: 'auto',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: "#fff"
   },
 });
 export default mainStyle;
