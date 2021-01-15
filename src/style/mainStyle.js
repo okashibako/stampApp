@@ -11,8 +11,6 @@ const mainStyle = StyleSheet.create({
   },
   boxStyle: {
     width:'auto',
-    margin: 10,
-    position:'relative',
   },
   DatePickerStyle: {
     marginLeft: 'auto',
