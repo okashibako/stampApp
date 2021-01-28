@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image} from 'react-native';
+import { View, Text, StyleSheet} from 'react-native';
+import Bubble from '../atom/Bubble';
 const Box = (props) => {
   
   return (
@@ -7,7 +8,7 @@ const Box = (props) => {
       <View style={styles.container}>
         <Text>React Nativeで吹き出しUIをつくるぞおおおおおおおおおおおおおお</Text>
       </View>
-      <View style={styles.bubble}/>
+      <View><Bubble/></View>
     </View>
     
   );
