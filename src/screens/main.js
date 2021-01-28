@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { View,ImageBackground, Text, StatusBar} from 'react-native';
+import { View,ImageBackground, StatusBar} from 'react-native';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Actions} from 'react-native-router-flux';
-import Box from '../../src/elements/atom/Box';
+import Box from '../../src/elements/molecules/Box';
 
 class main extends Component {
   constructor(props) {
