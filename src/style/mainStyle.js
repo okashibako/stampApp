@@ -6,7 +6,7 @@ const mainStyle = StyleSheet.create({
     resizeMode: "cover",
   },
   contents: {
-    marginTop: '20%',
+    marginTop: '10%',
     padding: '10%'
   },
   boxStyle: {

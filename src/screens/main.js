@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,ImageBackground, StatusBar} from 'react-native';
+import { View,ImageBackground, StatusBar, Image} from 'react-native';
 import OpningDatapicker from '../../src/components/OpningDatapicker';
 import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -44,9 +44,7 @@ class main extends Component {
           <View style={mainStyle.boxStyle}>
             <Box/>
           </View>
-          <View style={mainStyle.DatePickerStyle}>
-            {this.state.isModalDisplay ? <OpningDatapicker dated={this.state.date} change={(e,selectedDate) => {this.dateChange(e,selectedDate)}}/> : null}
-          </View>
+          <Image source={require('../../assets/fish.png')} />
         </View>
       </ImageBackground>
     );
