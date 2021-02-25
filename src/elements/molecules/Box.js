@@ -8,7 +8,8 @@ const Box = (props) => {
       <View style={styles.container}>
         <Text>React Nativeで吹き出しUIをつくるぞおおおおおおおおおおおおおお</Text>
       </View>
-      <View><Bubble/></View>
+      <View style={styles.bubble}><Bubble/></View>
+      <View style={styles.subbubble}><Bubble/></View>
     </View>
     
   );
@@ -21,10 +22,16 @@ const styles = StyleSheet.create({
       borderRadius: 10,
     },
     bubble: {
-      width: 30,
-      height: 30,
-      borderRadius: 50,
-      backgroundColor: '#fff'
-    }
+    justifyContent: 'center',
+    alignItems: 'center',
+    left: 30,
+    top: 5
+    },
+    subbubble: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      left: 20,
+      top: 10
+      }
   });
   export default Box;
