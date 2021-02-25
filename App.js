@@ -9,7 +9,7 @@ const App = () => (
     <Router>
         <Scene key="root">
         <Scene key="entrance" initial component={entrance} title="entrance" left={()=>null}/>
-        <Scene key="main" component={main} title="main" navBar={MainNavigationBar}/>
+        <Scene key="main" component={main} title="main" />
         </Scene>
     </Router>
 );
