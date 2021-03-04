@@ -9,7 +9,7 @@ class MainNavigationBar extends Component {
         <StatusBar />
         <View style={styles.rowsComponent}>
           <TouchableWithoutFeedback onPress={() => Actions.pop()}>
-            <Image source={require('../../../assets/baketu.png')}style={styles.backarrowStyle} />
+            <Image source={require('../../../assets/fish.png')}style={styles.backarrowStyle} />
           </TouchableWithoutFeedback>
         </View>
       </View>
@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
       resizeMode: 'contain',
       flexDirection: 'row',
       width: 40,
-      height: 80,
-      left: 0,
-      top:10,
+      height: 60,
+      left: 10,
+      top:0,
       justifyContent: 'flex-start'
     },
   });

@@ -8,8 +8,8 @@ import MainNavigationBar from './src/elements/molecules/MainNavigationBar';
 const App = () => (
     <Router>
         <Scene key="root">
-        <Scene key="entrance" initial component={entrance} title="entrance" left={()=>null}/>
-        <Scene key="main" component={main} title="main" />
+        <Scene key="entrance" initial component={entrance} title="entrance" hideNavBar/>
+        <Scene key="main" component={main} title="main" hideNavBar/>
         </Scene>
     </Router>
 );
