@@ -6,7 +6,7 @@ const AllowBack = () => {
   
     return (
       <TouchableWithoutFeedback onPress={() => Actions.pop()}>
-        <Image source={require('../../../assets/fish.png')}style={styles.backArrowStyle} />
+        <Image source={require('../../../assets/back.png')}style={styles.backArrowStyle} />
       </TouchableWithoutFeedback>
     );
   };
