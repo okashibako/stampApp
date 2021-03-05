@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { View, StatusBar,StyleSheet } from 'react-native';
+import { View, StatusBar,StyleSheet, Text } from 'react-native';
 import AllowBack from '../atom/AllowBack';
 
 class MainNavigationBar extends Component {
   render() {
     return (
-      <View style={styles.rowsComponent}>
-        <View style={styles.backarrowStyle}>
-          <AllowBack/>
+      <View style={styles.header}>
+        <View style={styles.navBarStyle}>
+          <AllowBack style={styles.backBtn}/>
+          <Text style={styles.title}>Awesome App</Text>
+          <AllowBack style={styles.backBtn}/>
         </View>
       </View>
     );
@@ -15,13 +17,21 @@ class MainNavigationBar extends Component {
 };
 
 const styles = StyleSheet.create({
-    rowsComponent: {
+    header: {
       backgroundColor: '#fff',  
-    },
-    backarrowStyle: {
-      left: 10,
-      top:50,
       height: 100,
+    },
+    navBarStyle: {
+      flexDirection: 'row',
+      paddingTop: 50,
+    },
+    backBtn: {
+    },
+    title: {
+      flex: 1,
+      color: '#000',
+      fontWeight: 'bold',
+      textAlign: 'center'
     },
   });
   export default MainNavigationBar;
