@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,ImageBackground, StatusBar, Image} from 'react-native';
+import { View,ImageBackground, StatusBar, Image, SafeAreaView} from 'react-native';
 import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Actions} from 'react-native-router-flux';
@@ -38,16 +38,18 @@ class main extends Component {
   }
   render() {
     return (
-      <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
-        <MainNavigationBar/>
-        <View style={mainStyle.contents}>
-        <StatusBar/>
-          <View style={mainStyle.boxStyle}>
-            <Box/>
+      <SafeAreaView style={mainStyle.safeArea}>
+        <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
+          <MainNavigationBar/>
+          <View style={mainStyle.contents}>
+          <StatusBar/>
+            <View style={mainStyle.boxStyle}>
+              <Box/>
+            </View>
+            <Image source={require('../../assets/fish.png')} />
           </View>
-          <Image source={require('../../assets/fish.png')} />
-        </View>
-      </ImageBackground>
+        </ImageBackground>
+      </SafeAreaView>
     );
   }
 }

@@ -20,5 +20,9 @@ const mainStyle = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#fff'
+  }
 });
 export default mainStyle;
