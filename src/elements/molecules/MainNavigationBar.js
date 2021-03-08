@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, StatusBar,StyleSheet, Text } from 'react-native';
-import AllowBack from '../atom/AllowBack';
 import Calender from '../atom/Calender';
 
 class MainNavigationBar extends Component {
@@ -8,7 +7,6 @@ class MainNavigationBar extends Component {
     return (
       <View style={styles.header}>
         <View style={styles.navBarStyle}>
-          <AllowBack style={styles.backBtn}/>
           <Text style={styles.title}>Awesome App</Text>
           <Calender style={styles.backBtn}/>
         </View>
@@ -32,7 +30,9 @@ const styles = StyleSheet.create({
       flex: 1,
       color: '#000',
       fontWeight: 'bold',
-      textAlign: 'center'
+      textAlign: 'center',
+      paddingLeft: 50,
+      fontSize:16
     },
   });
   export default MainNavigationBar;
