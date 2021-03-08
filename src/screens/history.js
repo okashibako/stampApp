@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {View, ImageBackground, SafeAreaView} from 'react-native';
 import historyStyle from '../../src/style/historyStyle';
-import HistroyNavigationBar from '../../src/elements/molecules/HistroyNavigationBar';
+import HistoryNavigationBar from '../../src/elements/molecules/HistoryNavigationBar';
 
 class history extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class history extends Component {
     return (
       <SafeAreaView style={historyStyle.safeArea}>
         <ImageBackground source={require('../../assets/carm_sea.jpg')} style={historyStyle.image}>
-        <HistroyNavigationBar/>
+        <HistoryNavigationBar/>
           <View style={historyStyle.contents}>
           </View>
         </ImageBackground>
