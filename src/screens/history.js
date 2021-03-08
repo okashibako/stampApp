@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import {View, ImageBackground, SafeAreaView} from 'react-native';
+import React, { useState } from 'react';
+import {View, ImageBackground, SafeAreaView, Text, Button} from 'react-native';
 import historyStyle from '../../src/style/historyStyle';
 import HistoryNavigationBar from '../../src/elements/molecules/HistoryNavigationBar';
 
-class history extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-       };
-  }
-  async componentDidMount(){
-  }
+function history() {
+  const [count, setCount] = useState(0);
 
-  render() {
     return (
       <SafeAreaView style={historyStyle.safeArea}>
         <ImageBackground source={require('../../assets/carm_sea.jpg')} style={historyStyle.image}>
         <HistoryNavigationBar/>
           <View style={historyStyle.contents}>
+          <Text>You clicked {count} times</Text>
+          <Button onPress={() => setCount(count + 1)} title={"カウント"}>
+            Click me
+          </Button>
           </View>
         </ImageBackground>
       </SafeAreaView>
     );
-  }
 }
 
 export default history;
