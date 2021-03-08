@@ -13,7 +13,7 @@ const AllowBack = () => {
   const styles = StyleSheet.create({
     backArrowStyle: {
       resizeMode: 'contain',
-      width: 50,
+      width: 30,
       height: 30,
     },
   });
