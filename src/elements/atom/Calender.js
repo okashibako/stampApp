@@ -1,10 +1,11 @@
 import React from 'react';
 import {StyleSheet, TouchableWithoutFeedback, Image} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 
 const Calender = () => {
   
     return (
-      <TouchableWithoutFeedback onPress={() => console.log("open!!")}>
+      <TouchableWithoutFeedback onPress={() => Actions.history()}>
         <Image source={require('../../../assets/calender.png')}style={styles.calenderLogoStyle} />
       </TouchableWithoutFeedback>
     );
