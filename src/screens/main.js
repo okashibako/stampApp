@@ -4,8 +4,7 @@ import mainStyle from '../../src/style/mainStyle';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Actions} from 'react-native-router-flux';
 import Box from '../../src/elements/molecules/Box';
-import MainNavigationBar from '../../src/elements/molecules/MainNavigationBar';
-
+import { Header } from 'react-native-elements';
 class main extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +39,11 @@ class main extends Component {
     return (
       <SafeAreaView style={mainStyle.safeArea}>
         <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
-          <MainNavigationBar/>
+        <Header
+          leftComponent={{ icon: 'menu', color: '#fff', iconStyle: { color: '#fff' } }}
+          centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+          rightComponent={{ icon: 'home', color: '#fff' }}
+        />
           <View style={mainStyle.contents}>
           <StatusBar/>
             <View style={mainStyle.boxStyle}>
