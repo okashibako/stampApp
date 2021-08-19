@@ -13,6 +13,7 @@
     "@codler/react-native-keyboard-aware-scroll-view": "^1.0.1",
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/datetimepicker": "^3.0.3",
+    "husky": "^7.0.1",
     "moment": "^2.29.0",
     "react": "16.13.1",
     "react-native": "^0.63.2",
@@ -39,6 +40,9 @@
     "react-test-renderer": "16.13.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation|@react-navigation/.*)"
+    ]
   }
 }
