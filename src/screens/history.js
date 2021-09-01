@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {View, ImageBackground, SafeAreaView, Text, Button} from 'react-native';
 import historyStyle from '../../src/style/historyStyle';
-import HistoryNavigationBar from '../../src/elements/molecules/HistoryNavigationBar';
 
 function history() {
   const [count, setCount] = useState(0);
@@ -9,7 +8,6 @@ function history() {
     return (
       <SafeAreaView style={historyStyle.safeArea}>
         <ImageBackground source={require('../../assets/carm_sea.jpg')} style={historyStyle.image}>
-        <HistoryNavigationBar/>
           <View style={historyStyle.contents}>
           <Text>You clicked {count} times</Text>
           <Button onPress={() => setCount(count + 1)} title={"カウント"}>

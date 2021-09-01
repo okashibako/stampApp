@@ -1,5 +1,4 @@
 import React from 'react';
-import {Scene,Router} from 'react-native-router-flux';
 import Entrance from './src/screens/entrance';
 import Main from './src/screens/main';
 import history from './src/screens/history';

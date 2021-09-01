@@ -3,16 +3,6 @@ import { View,ImageBackground } from 'react-native';
 import CircleButton from '../../src/elements/atom/CircleButton';
 import entranceStyle from '../../src/style/entranceStyle';
 import SelectModal from '../elements/molecules/SelectModal';
-import Realm from "realm";
-const Cat = {
-  name: "Cat",
-  properties: {
-    _id: "objectId",
-    name: "string",
-    age: "int",
-    type: "string",
-  },
-};
 function entrance({ navigation }){
   useEffect(() => {
   });
