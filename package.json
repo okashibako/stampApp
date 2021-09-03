@@ -20,6 +20,7 @@
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "git+https://github.com/software-mansion/react-native-screens.git",
     "react-native-svg": "^12.1.1",
+    "realm": "^10.7.0",
     "styled-components": "^5.3.1",
     "styled-system": "^5.1.5"
   },
