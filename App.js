@@ -24,16 +24,7 @@ function App(){
                 {props => <Entrance {...props} />}
               </Stack.Screen>
               <Stack.Screen name="main"
-                component={Main}
-                options={{
-                  headerRight: () => (
-                    <Button
-                      onPress={() => console.log("hello world")}
-                      title="Info"
-                      color="#fff"
-                    />
-                  ),
-                }}>
+                component={Main}>
               </Stack.Screen>
           </Stack.Navigator>
         </NavigationContainer>

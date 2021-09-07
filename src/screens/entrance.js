@@ -4,51 +4,36 @@ import CircleButton from '../../src/elements/atom/CircleButton';
 import entranceStyle from '../../src/style/entranceStyle';
 import Realm from "realm";
 
-const DogSchema = {
-  name: "Dog",
+const Schema = {
+  name: "Cource",
   properties: {
     name: "string",
-    age: "int?",
+    data: "int?",
   },
 };
 
 function entrance({ navigation }){
     
   useEffect(() => {
-    read();
   }, [])
 
-  async function read(){
-    let task;
-    try{
-      const realm = await Realm.open({
-        path: "myDog",
-        schema: [DogSchema],
-      });
-    task = realm.objects("Dog");
-    }catch(error){
-      console.log('エラー' + error.message);
-    }
-    if(task){
-      console.log("有りです")
-    } else {
-      console.log("無しです")
-    }
-  }
   async function start(){
-    let dog;
+    let data;
     try{
       const realm = await Realm.open({
-        path: "myDog",
-        schema: [DogSchema],
+        path: "myCource",
+        schema: [Schema],
       });
       realm.write(() => {
-        dog = realm.create("Dog", { name: "Max", age: 5, });
+        data = realm.create("Cource", { name: "edorian", data: 2 });
       });
     }catch(error){
       console.log('エラー' + error.message);
     }
-    navigation.navigate('main');
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'main' }],
+    });
   }
     return (
     <ImageBackground source={require('../../assets/carm_sea.jpg')} style={entranceStyle.image}>

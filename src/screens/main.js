@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { View,ImageBackground, StatusBar, Image, SafeAreaView} from 'react-native';
 import mainStyle from '../../src/style/mainStyle';
 import Box from '../../src/elements/molecules/Box';
+import Realm from "realm";
+
+const Schema = {
+  name: "Cource",
+  properties: {
+    name: "string",
+    data: "int?",
+  },
+};
+
 class main extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +21,22 @@ class main extends Component {
        };
   }
   async componentDidMount(){
+    let task;
+    try{
+      const realm = await Realm.open({
+        path: "myCource",
+        schema: [Schema],
+      });
+    task = realm.objects("Cource");
+    }catch(error){
+      console.log('エラー' + error.message);
+    }
+    if(task){
+      console.log("有りです")
+      console.log(task[0].name)
+    } else {
+      console.log("無しです")
+    }
   }
 
   dateChange(e,selectedDate){
