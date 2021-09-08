@@ -15,8 +15,31 @@ const Schema = {
 function entrance({ navigation }){
     
   useEffect(() => {
+    read();
   }, [])
 
+  async function read(){
+    let task;
+    try{
+      const realm = await Realm.open({
+        path: "myCource",
+        schema: [Schema],
+      });
+    task = realm.objects("Cource");
+    console.log(task)
+    if(task.length > 0){
+      console.log("有りです")
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'main' }],
+      });
+    } else {
+      console.log("無しです")
+    }
+    }catch(error){
+      console.log('エラー' + error.message);
+    }
+  }
   async function start(){
     let data;
     try{
