@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View,ImageBackground, StatusBar, Image, SafeAreaView} from 'react-native';
+import React,　{ useState, useEffect }from 'react';
+import { View,ImageBackground, StatusBar, Image, SafeAreaView, Button} from 'react-native';
 import mainStyle from '../../src/style/mainStyle';
 import Box from '../../src/elements/molecules/Box';
 import Realm from "realm";
@@ -12,15 +12,19 @@ const Schema = {
   },
 };
 
-class main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-      isModalDisplay: true
-       };
-  }
-  async componentDidMount(){
+function main({ navigation }){
+
+  useEffect(() => {
+    read();
+  }, [])
+
+  async function read(){
+    navigation.setOptions({
+      headerRight: () => (
+        <Button onPress={() => console.log("hello")} title="Update count" />
+      ),
+    });
+    [navigation]
     let task;
     try{
       const realm = await Realm.open({
@@ -38,17 +42,6 @@ class main extends Component {
       console.log("無しです")
     }
   }
-
-  dateChange(e,selectedDate){
-    if(selectedDate){
-      this.setState({ isModalDisplay: !this.state.isModalDisplay });
-      this.setState({date: selectedDate});
-      console.log(this.state.date);
-    } else {
-      console.log("ひっぽ");
-    }
-  }
-  render() {
     return (
       <SafeAreaView style={mainStyle.safeArea}>
         <ImageBackground source={require('../../assets/carm_sea.jpg')} style={mainStyle.image}>
@@ -62,7 +55,6 @@ class main extends Component {
         </ImageBackground>
       </SafeAreaView>
     );
-  }
 }
 
 export default main;
