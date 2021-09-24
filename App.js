@@ -1,7 +1,7 @@
 import React from 'react';
 import Entrance from './src/screens/entrance';
 import Main from './src/screens/main';
-import history from './src/screens/history';
+import History from './src/screens/history';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { extendTheme, NativeBaseProvider, Button } from 'native-base';
@@ -25,6 +25,9 @@ function App(){
               </Stack.Screen>
               <Stack.Screen name="main"
                 component={Main}>
+              </Stack.Screen>
+              <Stack.Screen name="history">
+                {props => <History {...props} />}
               </Stack.Screen>
           </Stack.Navigator>
         </NavigationContainer>

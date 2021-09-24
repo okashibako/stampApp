@@ -21,7 +21,7 @@ function main({ navigation }){
   async function read(){
     navigation.setOptions({
       headerRight: () => (
-        <Button onPress={() => console.log("hello")} title="Update count" />
+        <Button onPress={() => navigation.navigate('history')} title="カレンダー" />
       ),
     });
     [navigation]
