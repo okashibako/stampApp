@@ -20,39 +20,27 @@ function entrance({ navigation }){
 
   async function read(){
     let task;
-    try{
-      const realm = await Realm.open({
-        path: "myCource",
-        schema: [Schema],
-      });
+    const realm = await Realm.open({
+      path: "myCource",
+      schema: [Schema],
+    });
     task = realm.objects("Cource");
-    console.log(task)
     if(task.length > 0){
-      console.log("有りです")
       navigation.reset({
         index: 0,
         routes: [{ name: 'main' }],
       });
-    } else {
-      console.log("無しです")
-    }
-    }catch(error){
-      console.log('エラー' + error.message);
     }
   }
   async function start(){
     let data;
-    try{
-      const realm = await Realm.open({
-        path: "myCource",
-        schema: [Schema],
-      });
-      realm.write(() => {
-        data = realm.create("Cource", { name: "edorian", data: 2 });
-      });
-    }catch(error){
-      console.log('エラー' + error.message);
-    }
+    const realm = await Realm.open({
+      path: "myCource",
+      schema: [Schema],
+    });
+    realm.write(() => {
+      data = realm.create("Cource", { data: 2 });
+    });
     navigation.reset({
       index: 0,
       routes: [{ name: 'main' }],
@@ -62,9 +50,9 @@ function entrance({ navigation }){
     <ImageBackground source={require('../../assets/carm_sea.jpg')} style={entranceStyle.image}>
       <View style={entranceStyle.pageStyle}>
           <View style={entranceStyle.upperButtonStyle}>
-            <CircleButton press={() => {start()}} text="三日間コース"/>
-            <CircleButton press={() => {start()}} text="一週間コース"/>
-            <CircleButton press={() => {start()}} text="一週間コース"/>
+            <CircleButton press={() => {start(1)}} text="三日間コース"/>
+            <CircleButton press={() => {start(2)}} text="一週間コース"/>
+            <CircleButton press={() => {start(3)}} text="一週間コース"/>
           </View>
       </View>
     </ImageBackground>

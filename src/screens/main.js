@@ -26,21 +26,12 @@ function main({ navigation }){
     });
     [navigation]
     let task;
-    try{
-      const realm = await Realm.open({
-        path: "myCource",
-        schema: [Schema],
-      });
+    const realm = await Realm.open({
+      path: "myCource",
+      schema: [Schema],
+    });
     task = realm.objects("Cource");
-    }catch(error){
-      console.log('エラー' + error.message);
-    }
-    if(task){
-      console.log("有りです")
-      console.log(task[0].name)
-    } else {
-      console.log("無しです")
-    }
+    console.log(task[0].data)
   }
     return (
       <SafeAreaView style={mainStyle.safeArea}>
